@@ -8,5 +8,7 @@ import java.util.List;
 
 @Repository
 public interface BookRepository extends CrudRepository<BookEntity,Integer> {
-    List<BookEntity> finByAuthor(String author);
+    List<BookEntity> findByAuthor(String author);
+    List<BookEntity> findByNameContaining(String name);
+
 }
